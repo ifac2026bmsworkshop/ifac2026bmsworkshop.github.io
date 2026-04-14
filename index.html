@@ -239,12 +239,175 @@
         </div>
     </section>
 
+
+
+
     <section id="schedule" class="py-28 bg-slate-50 border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold mb-12 text-slate-900 tracking-tight text-center">Workshop Schedule</h2>
-            <p class="text-slate-400 font-medium text-lg italic">The detailed schedule will be provided soon.</p>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold mb-14 text-slate-900 tracking-tight text-center">Workshop Schedule</h2>
+            <div style="display:flex; gap:24px; align-items:flex-start;">
+    
+                <div style="flex:1; min-width:0; overflow-x:auto;">
+                    <table style="width:100%; border-collapse:collapse; font-size:13px;">
+                        <thead>
+                            <tr style="background:#1e3a8a; color:white;">
+                                <th style="padding:12px 14px; text-align:left; font-weight:700; font-size:12px; letter-spacing:0.05em; width:110px;">Time</th>
+                                <th style="padding:12px 14px; text-align:left; font-weight:700; font-size:12px; letter-spacing:0.05em;">Speaker</th>
+                                <th style="padding:12px 14px; text-align:left; font-weight:700; font-size:12px; letter-spacing:0.05em;">Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,0)">
+                                <td style="padding:11px 14px; color:#64748b; font-weight:600; white-space:nowrap; vertical-align:top;">08:30–09:00</td>
+                                <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Prof. Scott Moura</span><br><span style="font-size:12px; color:#64748b;">UC Berkeley</span></td>
+                                <td style="padding:11px 14px; vertical-align:top; color:#475569; font-style:italic; font-size:12px;">Registration & Welcome Reception</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,1)">
+                                <td style="padding:11px 14px; color:#64748b; font-weight:600; white-space:nowrap; vertical-align:top;">09:00–09:45</td>
+                                <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Prof. Jangwook Choi</span><br><span style="font-size:12px; color:#64748b;">Seoul National University</span></td>
+                                <td style="padding:11px 14px; vertical-align:top; color:#475569; font-style:italic; font-size:12px;">Prediction and Diagnosis of Commercial Lithium-Ion Batteries Using Electrochemistry Domain Knowledge</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
+                                <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">09:45–10:00</td>
+                                <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Break</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,2)">
+                                <td style="padding:11px 14px; color:#64748b; font-weight:600; white-space:nowrap; vertical-align:top;">10:00–10:30</td>
+                                <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Prof. Juhyun Song</span><br><span style="font-size:12px; color:#64748b;">Korea Institute of Energy Technology</span></td>
+                                <td style="padding:11px 14px; vertical-align:top; color:#475569; font-style:italic; font-size:12px;">Battery lifetime management via human-centric contextual learning: application to delayed full-charging</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,3)">
+                                <td style="padding:11px 14px; color:#64748b; font-weight:600; white-space:nowrap; vertical-align:top;">10:30–11:00</td>
+                                <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Prof. Changfu Zou</span><br><span style="font-size:12px; color:#64748b;">Chalmers University of Technology</span></td>
+                                <td style="padding:11px 14px; vertical-align:top; color:#475569; font-style:italic; font-size:12px;">Model-integrated neural networks for control-oriented battery modeling and inference</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
+                                <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">11:00–11:15</td>
+                                <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Break</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
+                                <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">11:15–12:00</td>
+                                <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Panel Talk (Academia) — TBD</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#fefce8;">
+                                <td style="padding:11px 14px; color:#92400e; font-weight:600; white-space:nowrap; vertical-align:top;">12:00–13:00</td>
+                                <td colspan="2" style="padding:11px 14px; color:#92400e; font-style:italic;">Lunch Break</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,4)">
+                                <td style="padding:11px 14px; color:#64748b; font-weight:600; white-space:nowrap; vertical-align:top;">13:00–13:30</td>
+                                <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Prof. Huazhen Fang</span><br><span style="font-size:12px; color:#64748b;">Michigan State University</span></td>
+                                <td style="padding:11px 14px; vertical-align:top; color:#475569; font-style:italic; font-size:12px;">Reconfigurable Battery System Design and Optimal Power Control</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
+                                <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">13:30–14:00</td>
+                                <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Tech Talk #5 — TBD</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
+                                <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">14:00–14:15</td>
+                                <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Break</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,5)">
+                                <td style="padding:11px 14px; color:#64748b; font-weight:600; white-space:nowrap; vertical-align:top;">14:15–14:45</td>
+                                <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Dr. Gwanghoon Jun</span><br><span style="font-size:12px; color:#64748b;">LG Energy Solution</span></td>
+                                <td style="padding:11px 14px; vertical-align:top; color:#475569; font-style:italic; font-size:12px;">TBD</td>
+                            </tr>
+                            <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
+                                <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">14:45–15:30</td>
+                                <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Panel Talk (Industry) — TBD</td>
+                            </tr>
+                            <tr style="background:#f5f3ff;">
+                                <td style="padding:11px 14px; color:#6d28d9; font-weight:600; white-space:nowrap; vertical-align:top;">15:30–17:00</td>
+                                <td colspan="2" style="padding:11px 14px; color:#6d28d9; font-style:italic;">Networking</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div id="sch-panel" style="display:none; width:280px; min-width:280px; background:white; border:1px solid #e2e8f0; border-radius:16px; padding:20px; position:sticky; top:100px;">
+                    <div id="sch-p-time" style="font-size:11px; font-weight:700; color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;"></div>
+                    <div id="sch-p-name" style="font-size:15px; font-weight:700; color:#0f172a; margin-bottom:2px;"></div>
+                    <div id="sch-p-affil" style="font-size:12px; color:#64748b; margin-bottom:12px;"></div>
+                    <div id="sch-p-title" style="font-size:13px; font-weight:600; color:#1e3a8a; margin-bottom:10px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;"></div>
+                    <div id="sch-p-abstract" style="font-size:12px; color:#475569; line-height:1.7;"></div>
+                </div>
+    
+            </div>
         </div>
+    
+        <script>
+        const schData = [
+            {
+                time: "08:30 – 09:00",
+                name: "Prof. Scott Moura",
+                affil: "University of California, Berkeley",
+                title: "Registration & Welcome Reception",
+                abstract: "Welcome remarks and workshop overview from the organizing team."
+            },
+            {
+                time: "09:00 – 09:45",
+                name: "Prof. Jangwook Choi",
+                affil: "Seoul National University",
+                title: "Prediction and Diagnosis of Commercial Lithium-Ion Batteries Using Electrochemistry Domain Knowledge",
+                abstract: "Jang Wook Choi is currently a Professor in the School of Chemical and Biological Engineering at Seoul National University. His research focuses on materials design, cell engineering, and health diagnostics and lifetime prediction for various rechargeable batteries."
+            },
+            {
+                time: "10:00 – 10:30",
+                name: "Prof. Juhyun Song",
+                affil: "Korea Institute of Energy Technology",
+                title: "Battery lifetime management via human-centric contextual learning: application to delayed full-charging",
+                abstract: "This talk presents a human-centric contextual learning framework for battery lifetime management, with application to delayed full-charging strategies that extend battery longevity while respecting user behavior."
+            },
+            {
+                time: "10:30 – 11:00",
+                name: "Prof. Changfu Zou",
+                affil: "Chalmers University of Technology",
+                title: "Model-integrated neural networks for control-oriented battery modeling and inference",
+                abstract: "This talk presents model-integrated neural network approaches combining physics-based models with data-driven techniques for control-oriented battery modeling and inference."
+            },
+            {
+                time: "13:00 – 13:30",
+                name: "Prof. Huazhen Fang",
+                affil: "Michigan State University",
+                title: "Reconfigurable Battery System Design and Optimal Power Control",
+                abstract: "This talk addresses reconfigurable battery system architectures and optimal power control strategies, enabling flexible and efficient energy management across diverse applications."
+            },
+            {
+                time: "14:15 – 14:45",
+                name: "Dr. Gwanghoon Jun",
+                affil: "LG Energy Solution",
+                title: "TBD",
+                abstract: "Abstract to be announced."
+            }
+        ];
+    
+        let schActiveRow = null;
+    
+        function schSelect(row, idx) {
+            if (schActiveRow) {
+                schActiveRow.classList.remove('sch-active');
+                schActiveRow.style.background = '';
+            }
+            if (schActiveRow === row) {
+                schActiveRow = null;
+                document.getElementById('sch-panel').style.display = 'none';
+                return;
+            }
+            schActiveRow = row;
+            row.classList.add('sch-active');
+            row.style.background = '#dbeafe';
+            const d = schData[idx];
+            document.getElementById('sch-p-time').textContent = d.time;
+            document.getElementById('sch-p-name').textContent = d.name;
+            document.getElementById('sch-p-affil').textContent = d.affil;
+            document.getElementById('sch-p-title').textContent = d.title;
+            document.getElementById('sch-p-abstract').textContent = d.abstract;
+            document.getElementById('sch-panel').style.display = 'block';
+        }
+        </script>
     </section>
+
+
+    
 
     <section id="venue" class="py-28 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-6 text-center">
