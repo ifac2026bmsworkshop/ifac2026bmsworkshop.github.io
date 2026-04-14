@@ -16,8 +16,7 @@
 <body class="bg-white text-slate-900">
 
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-extrabold text-xl tracking-tight text-blue-900">IFAC 2026 BMS Workshop</span>
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-end items-center">
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600 uppercase tracking-wide">
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#speakers" class="hover:text-blue-600 transition">Speakers</a>
@@ -28,26 +27,45 @@
 
     <header class="hero-gradient pt-48 pb-32 px-6 text-center text-white">
         <div class="max-w-5xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-[1.1]">
-                Next-Generation Battery Management Systems
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-[1.1] text-white">
+                Next-Generation<br>
+                Battery Management Systems
             </h1>
-            <p class="text-2xl md:text-3xl text-white/90 font-medium max-w-3xl mx-auto opacity-95">
+            <p class="text-2xl md:text-3xl font-medium max-w-3xl mx-auto text-white">
                 : Modeling, Estimation, Control, and Learning
             </p>
         </div>
     </header>
 
-    <div class="bg-slate-900 text-white py-8 px-6 text-center border-b border-slate-800 shadow-lg">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-            <div class="text-center md:text-left space-y-1">
-                <div class="text-blue-400 font-bold text-lg tracking-tight">August 23, 2026</div>
-                <div class="italic text-slate-400 text-sm font-medium">Location: BEXCO, Busan, Republic of Korea</div>
+    <div class="bg-slate-900 text-white py-10 px-6 text-center border-b border-slate-800 shadow-lg">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+            <div class="text-center md:text-left space-y-2">
+                <div class="text-white font-bold text-2xl tracking-tight">August 23, 2026</div>
+                <div class="italic text-white/80 text-lg font-medium">Location: BEXCO, Busan, Republic of Korea</div>
             </div>
             
             <div class="flex flex-col items-center md:items-end">
-                <span class="text-[11px] font-bold tracking-[0.2em] text-slate-500 uppercase mb-2">Countdown to Workshop</span>
-                <div id="countdown" class="text-4xl font-mono font-bold tracking-tighter text-white">
-                    00:00:00:00
+                <span class="text-sm font-bold tracking-[0.2em] text-white/60 uppercase mb-4">Countdown to Workshop</span>
+                <div class="flex space-x-4 text-center">
+                    <div class="flex flex-col">
+                        <span id="days" class="text-4xl font-mono font-bold text-white">00</span>
+                        <span class="text-[10px] text-white/50 uppercase mt-1">Days</span>
+                    </div>
+                    <div class="text-4xl font-mono font-bold text-white/30">:</div>
+                    <div class="flex flex-col">
+                        <span id="hours" class="text-4xl font-mono font-bold text-white">00</span>
+                        <span class="text-[10px] text-white/50 uppercase mt-1">Hours</span>
+                    </div>
+                    <div class="text-4xl font-mono font-bold text-white/30">:</div>
+                    <div class="flex flex-col">
+                        <span id="minutes" class="text-4xl font-mono font-bold text-white">00</span>
+                        <span class="text-[10px] text-white/50 uppercase mt-1">Minutes</span>
+                    </div>
+                    <div class="text-4xl font-mono font-bold text-white/30">:</div>
+                    <div class="flex flex-col">
+                        <span id="seconds" class="text-4xl font-mono font-bold text-white">00</span>
+                        <span class="text-[10px] text-white/50 uppercase mt-1">Seconds</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,7 +75,7 @@
         <div class="max-w-4xl mx-auto">
             <div class="mb-20">
                 <h2 class="text-4xl font-extrabold mb-10 text-slate-900 tracking-tight">About The Workshop</h2>
-                <div class="space-y-8 text-lg text-slate-600 leading-relaxed text-left font-normal">
+                <div class="space-y-8 text-lg text-slate-600 leading-relaxed text-left">
                     <p>
                         The safety, performance, and longevity of battery energy storage systems depend heavily on advanced Battery Management Systems (BMS). While decades of research have enabled accurate modeling, state-aware monitoring, and reliable decision-making for systems under demanding operating conditions, fundamental challenges still remain when transitioning battery management algorithms from laboratory settings to real-world deployment.
                     </p>
@@ -70,17 +88,17 @@
             <div class="text-left mb-10">
                 <h3 class="text-2xl font-bold text-slate-900 mb-10 px-2 tracking-tight">Why Join Us?</h3>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition">
+                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm">
                         <div class="text-blue-900 font-bold text-lg mb-4 leading-tight">World-Class & Diverse Insights</div>
                         <p class="text-slate-600 text-[15px] leading-relaxed">Learn from pioneers across different fields—materials science, control engineering, and machine learning—representing premier academic institutions and global industry leaders.</p>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition text-slate-600">
+                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm">
                         <div class="text-blue-900 font-bold text-lg mb-4 leading-tight">Academia-Industry Panel</div>
-                        <p class="text-[15px] leading-relaxed">Participate in an interactive Q&A forum dedicated to addressing the academia-industry gap and real-world deployment challenges.</p>
+                        <p class="text-slate-600 text-[15px] leading-relaxed">Participate in an interactive Q&A forum dedicated to addressing the academia-industry gap and real-world deployment challenges.</p>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition">
+                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm">
                         <div class="text-blue-900 font-bold text-lg mb-4 leading-tight">Community Building</div>
-                        <p class="text-slate-600 text-[15px] leading-relaxed text-slate-600">Connect with a diverse community of experts to shape the future of next-generation battery management systems.</p>
+                        <p class="text-slate-600 text-[15px] leading-relaxed">Connect with a diverse community of experts to shape the future of next-generation battery management systems.</p>
                     </div>
                 </div>
             </div>
@@ -123,7 +141,10 @@
             const distance = targetDate - now;
 
             if (distance < 0) {
-                document.getElementById("countdown").innerHTML = "WORKSHOP STARTED";
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
                 return;
             }
 
@@ -132,8 +153,10 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = 
-                `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
