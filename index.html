@@ -145,27 +145,27 @@
             <h2 class="text-4xl font-extrabold mb-12 text-slate-900 tracking-tight text-center">Organizers</h2>
             <div class="grid md:grid-cols-3 gap-8 text-center">
     
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(5)">
                     <img src="photos/scott.jpg" alt="Scott Moura"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                         class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Scott Moura</p>
                     <p class="text-slate-500 text-sm italic">University of California, Berkeley</p>
                 </div>
     
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(1)">
                     <img src="photos/song.jpg" alt="Juhyun Song"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                         class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Juhyun Song</p>
                     <p class="text-slate-500 text-sm italic">Korea Institute of Energy Technology</p>
                 </div>
     
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(6)">
                     <img src="photos/jaewoong.jpg" alt="Jaewoong Lee"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                         class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Jaewoong Lee</p>
@@ -255,38 +255,45 @@
             {
                 name: "Jangwook Choi",
                 affil: "Seoul National University",
-                title: "Prediction and Diagnosis of Commercial Lithium-Ion Batteries Using Electrochemistry Domain Knowledge",
                 bio: "Jang Wook Choi is currently a Professor in the School of Chemical and Biological Engineering at Seoul National University. He earned his PhD degree from California Institute of Technology in 2007, specializing in molecular electronics and electrochemistry. He conducted postdoctoral research at Stanford University in the field of lithium-ion batteries from 2008 to 2010. He began his independent research at Korea Advanced Institute of Science and Technology (KAIST) in 2010 and moved to Seoul National University in 2017. His research focuses on materials design, cell engineering, and health diagnostics and lifetime prediction for various rechargeable batteries.",
                 photo: "photos/choi.jpg"
             },
             {
                 name: "Juhyun Song",
                 affil: "Korea Institute of Energy Technology",
-                title: "Battery lifetime management via human-centric contextual learning: application to delayed full-charging",
                 bio: "Juhyun Song is an Assistant Professor at the Korea Institute of Energy Technology (KENTECH), studying battery modeling and BMS algorithms. The overarching goal of his research is to understand the various dynamics in and around batteries to optimize their performance through physics- and data-based modeling. His interests cover a broad range of topics, including electrochemical methods, in-situ diagnostics, thermal management, and life-extension algorithms. Prof. Song brings industry expertise to his academic work, having previously worked as a Software Engineer at Apple, where he implemented BMS algorithms for the Apple Watch and iPhone. He holds a PhD and an MBA from MIT.",
                 photo: "photos/song.jpg"
             },
             {
                 name: "Changfu Zou",
                 affil: "Chalmers University of Technology",
-                title: "Model-integrated neural networks for control-oriented battery modeling and inference",
                 bio: "Changfu Zou is a Professor and PI of the Energy Systems and Optimal Control (eSOC) group at Chalmers University of Technology, Gothenburg, Sweden. His research focuses on modeling, monitoring, and control of energy systems, particularly lithium-ion batteries. Much of his work is conducted in close collaboration with industry partners, such as Volvo, Scania, and ABB. As PI or Co-PI, he has received competitive research funding from the Swedish Research Council (including Starting Grant and Project Grant), Energy Agency, Innovation Agency, Knut and Alice Wallenberg Foundation, and the European Commission. His work has been recognized through several distinctions such as the IEEE VTS Best Vehicular Electronics Paper Award, IEEE TTE Prize Paper Award, and inclusion in the Royal Swedish Academy of Engineering Sciences (IVA)’s 100 List. He currently serves on the editorial boards of three well-established international journals and regularly reviews for national and international research funding agencies.",
                 photo: "photos/zou.jpg"
             },
             {
                 name: "Huazhen Fang",
                 affil: "Michigan State University",
-                title: "Reconfigurable Battery System Design and Optimal Power Control",
                 bio: "Huazhen Fang is an Associate Professor of Mechanical Engineering at Michigan State University. Prior to joining MSU, he was with the University of Kansas. He received his Ph.D. from the University of California, San Diego in 2014, M.Sc. from the University of Saskatchewan, Canada in 2009, and B.Eng. from Northwestern Polytechnic University, China in 2006. His research interests lie in advanced battery energy storage systems and control with different applications. He received the NSF Faculty Early Career Award in 2019, the University Scholarly Achievement Award at the University of Kansas in 2024, and a Prize Paper Award from IEEE Transactions on Transportation Electrification in 2024. He currently serves as an Associate Editor for IEEE Transactions on Industrial Electronics and IEEE Control Systems Letters.",
                 photo: "photos/fang.jpg"
             },
             {
                 name: "Gwanghoon Jun",
                 affil: "LG Energy Solution",
-                title: "TBD",
                 bio: "Dr. Gwanghoon Jun is a Principal Research Engineer at LG Energy Solution. He received his Ph.D. in Materials Science and Engineering from Korea Advanced Institute of Science and Technology (KAIST) in 2015. After joining LG, he has focused on battery performance simulation and electrochemistry-based physics modeling. His current research involves developing degradation models to predict battery life and applying them to BMS for optimal control and BaaS (Battery as a Service) business models. He specializes in accurately estimating model parameters from high-quality field data to advance BMS.",
                 photo: "photos/jun.jpg"
-            }
+            },
+            {
+                name: "Scott Moura",
+                affil: "University of California, Berkeley",
+                bio: "TBD",
+                photo: "photos/moura.jpg"
+            },
+            {
+                name: "Jaewoong Lee",
+                affil: "University of California, Berkeley",
+                bio: "TBD",
+                photo: "photos/jaewoong.jpg"
+            },
         ];
     
         function openLB(idx) {
