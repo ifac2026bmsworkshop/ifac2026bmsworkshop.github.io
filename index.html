@@ -36,11 +36,20 @@
             <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
                 Next-Generation Battery Management Systems
             </h1>
-            <p class="text-3xl text-blue-100 font-bold max-w-2xl mx-auto">
+            <p class="text-3xl text-white font-bold max-w-2xl mx-auto">
                 : Modeling, Estimation, Control, and Learning
             </p>
         </div>
     </header>
+
+    <div class="bg-slate-900 text-white py-4 px-6 text-center border-b border-slate-800">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-8">
+            <span class="text-sm font-semibold tracking-wider text-slate-400 uppercase">Countdown to Workshop</span>
+            <div id="countdown" class="text-2xl font-mono font-bold tracking-widest text-blue-400">
+                00:00:00:00
+            </div>
+        </div>
+    </div>
 
     <section id="about" class="py-20 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
@@ -102,6 +111,36 @@
             <p>© 2026 IFAC BMS Workshop. Organized by Scott Moura Lab, UC Berkeley.</p>
         </div>
     </footer>
+
+    <script>
+        function updateCountdown() {
+            // Target date: August 23, 2026, 08:00:00 AM (KST / UTC+9)
+            const targetDate = new Date("2026-08-23T08:00:00+09:00").getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "WORKSHOP STARTED";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Format as DD:HH:MM:SS
+            const d = days.toString().padStart(2, '0');
+            const h = hours.toString().padStart(2, '0');
+            const m = minutes.toString().padStart(2, '0');
+            const s = seconds.toString().padStart(2, '0');
+
+            document.getElementById("countdown").innerHTML = `${d}:${h}:${m}:${s}`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 
 </body>
 </html>
