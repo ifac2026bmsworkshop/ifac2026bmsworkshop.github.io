@@ -245,7 +245,6 @@
                 <div style="flex:1;">
                     <div id="lb-name" style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:2px;"></div>
                     <div id="lb-affil" style="font-size:13px; color:#64748b; margin-bottom:10px;"></div>
-                    <div id="lb-title" style="font-size:13px; font-weight:600; color:#1e3a8a; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #f1f5f9;"></div>
                     <div id="lb-bio" style="font-size:13px; color:#475569; line-height:1.7;"></div>
                 </div>
             </div>
@@ -294,7 +293,6 @@
             const s = lbSpeakers[idx];
             document.getElementById('lb-name').textContent = s.name;
             document.getElementById('lb-affil').textContent = s.affil;
-            document.getElementById('lb-title').textContent = s.title;
             document.getElementById('lb-bio').textContent = s.bio;
             document.getElementById('lb-img').src = s.photo;
             document.getElementById('lb-img').alt = s.name;
