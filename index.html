@@ -176,42 +176,42 @@
         </div>
     </section>
 
+
+    
+
+
     <!-- Speakers -->
     <section id="speakers" class="py-28 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-4xl font-extrabold mb-14 text-slate-900 tracking-tight text-center">Invited Speakers</h2>
             <div class="grid md:grid-cols-3 gap-x-8 gap-y-14 text-center">
     
-                <div class="flex flex-col items-center">
-                    <img src="photos/choi.jpg" alt="Jang Wook Choi"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(0)">
+                    <img src="photos/choi.jpg" alt="Jangwook Choi" class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
-                    <p class="text-blue-900 font-bold text-lg mb-1">Jang Wook Choi</p>
+                    <p class="text-blue-900 font-bold text-lg mb-1">Jangwook Choi</p>
                     <p class="text-slate-500 text-sm italic">Seoul National University</p>
                 </div>
     
-                <div class="flex flex-col items-center">
-                    <img src="photos/song.jpg" alt="Juhyun Song"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(1)">
+                    <img src="photos/song.jpg" alt="Juhyun Song" class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Juhyun Song</p>
                     <p class="text-slate-500 text-sm italic">Korea Institute of Energy Technology</p>
                 </div>
     
-                <div class="flex flex-col items-center">
-                    <img src="photos/zou.jpg" alt="Changfu Zou"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(2)">
+                    <img src="photos/zou.jpg" alt="Changfu Zou" class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Changfu Zou</p>
                     <p class="text-slate-500 text-sm italic">Chalmers University of Technology</p>
                 </div>
     
-                <div class="flex flex-col items-center">
-                    <img src="photos/fang.jpg" alt="Huazhen Fang"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(3)">
+                    <img src="photos/fang.jpg" alt="Huazhen Fang" class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Huazhen Fang</p>
@@ -226,9 +226,8 @@
                     <p class="text-slate-300 text-sm italic">—</p>
                 </div>
     
-                <div class="flex flex-col items-center">
-                    <img src="photos/jun.jpg" alt="Gwanghoon Jun"
-                         class="w-56 h-56 rounded-full object-cover mb-5"
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(4)">
+                    <img src="photos/jun.jpg" alt="Gwanghoon Jun" class="w-56 h-56 rounded-full object-cover mb-5 border-4 border-transparent hover:border-blue-700 transition"
                          onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5" style="display:none;"></div>
                     <p class="text-blue-900 font-bold text-lg mb-1">Gwanghoon Jun</p>
@@ -237,7 +236,80 @@
     
             </div>
         </div>
+    
+        <!-- Lightbox -->
+        <div id="lb-overlay" onclick="closeLB(event)" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:999; align-items:center; justify-content:center;">
+            <div style="background:white; border-radius:20px; max-width:640px; width:90%; padding:2rem; display:flex; gap:1.5rem; position:relative;">
+                <button onclick="document.getElementById('lb-overlay').style.display='none'" style="position:absolute; top:14px; right:16px; font-size:20px; color:#94a3b8; cursor:pointer; background:none; border:none;">✕</button>
+                <img id="lb-img" src="" alt="" style="width:120px; height:120px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+                <div style="flex:1;">
+                    <div id="lb-name" style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:2px;"></div>
+                    <div id="lb-affil" style="font-size:13px; color:#64748b; margin-bottom:10px;"></div>
+                    <div id="lb-title" style="font-size:13px; font-weight:600; color:#1e3a8a; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #f1f5f9;"></div>
+                    <div id="lb-bio" style="font-size:13px; color:#475569; line-height:1.7;"></div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+        const lbSpeakers = [
+            {
+                name: "Jangwook Choi",
+                affil: "Seoul National University",
+                title: "Prediction and Diagnosis of Commercial Lithium-Ion Batteries Using Electrochemistry Domain Knowledge",
+                bio: "Jang Wook Choi is currently a Professor in the School of Chemical and Biological Engineering at Seoul National University. He earned his PhD from Caltech in 2007, specializing in molecular electronics and electrochemistry. He conducted postdoctoral research at Stanford University from 2008 to 2010. His research focuses on materials design, cell engineering, and health diagnostics and lifetime prediction for various rechargeable batteries.",
+                photo: "photos/choi.jpg"
+            },
+            {
+                name: "Juhyun Song",
+                affil: "Korea Institute of Energy Technology",
+                title: "Battery lifetime management via human-centric contextual learning: application to delayed full-charging",
+                bio: "Juhyun Song is an Assistant Professor at KENTECH, studying battery modeling and BMS algorithms. He previously worked as a Software Engineer at Apple, implementing BMS algorithms for the Apple Watch and iPhone. He holds a PhD and an MBA from MIT.",
+                photo: "photos/song.jpg"
+            },
+            {
+                name: "Changfu Zou",
+                affil: "Chalmers University of Technology",
+                title: "Model-integrated neural networks for control-oriented battery modeling and inference",
+                bio: "Changfu Zou is a Professor and PI of the Energy Systems and Optimal Control (eSOC) group at Chalmers University of Technology. His research focuses on modeling, monitoring, and control of energy systems, particularly lithium-ion batteries, in close collaboration with industry partners such as Volvo, Scania, and ABB.",
+                photo: "photos/zou.jpg"
+            },
+            {
+                name: "Huazhen Fang",
+                affil: "Michigan State University",
+                title: "Reconfigurable Battery System Design and Optimal Power Control",
+                bio: "Huazhen Fang is an Associate Professor of Mechanical Engineering at Michigan State University. He received his Ph.D. from UC San Diego in 2014. His research interests lie in advanced battery energy storage systems and control. He received the NSF Faculty Early Career Award in 2019.",
+                photo: "photos/fang.jpg"
+            },
+            {
+                name: "Gwanghoon Jun",
+                affil: "LG Energy Solution",
+                title: "TBD",
+                bio: "Dr. Gwanghoon Jun is a Principal Research Engineer at LG Energy Solution. He received his Ph.D. in Materials Science and Engineering from KAIST in 2015. He has focused on battery performance simulation and electrochemistry-based physics modeling, developing degradation models to predict battery life.",
+                photo: "photos/jun.jpg"
+            }
+        ];
+    
+        function openLB(idx) {
+            const s = lbSpeakers[idx];
+            document.getElementById('lb-name').textContent = s.name;
+            document.getElementById('lb-affil').textContent = s.affil;
+            document.getElementById('lb-title').textContent = s.title;
+            document.getElementById('lb-bio').textContent = s.bio;
+            document.getElementById('lb-img').src = s.photo;
+            document.getElementById('lb-img').alt = s.name;
+            const overlay = document.getElementById('lb-overlay');
+            overlay.style.display = 'flex';
+        }
+    
+        function closeLB(e) {
+            if (e.target === document.getElementById('lb-overlay')) {
+                document.getElementById('lb-overlay').style.display = 'none';
+            }
+        }
+        </script>
     </section>
+
 
 
 
