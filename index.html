@@ -490,6 +490,16 @@
             document.getElementById('sch-p-abstract').textContent = d.abstract;
             document.getElementById('sch-panel').style.display = 'block';
         }
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('tr') && !e.target.closest('#sch-panel')) {
+                if (schActiveRow) {
+                    schActiveRow.classList.remove('sch-active');
+                    schActiveRow.style.background = '';
+                    schActiveRow = null;
+                }
+                document.getElementById('sch-panel').style.display = 'none';
+            }
+        });
         </script>
     </section>
 
