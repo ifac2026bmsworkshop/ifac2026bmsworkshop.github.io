@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFAC 2026 Workshop | Next-Gen BMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-gradient {
@@ -15,10 +15,10 @@
 </head>
 <body class="bg-white text-slate-900">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-bold text-lg tracking-tight text-blue-900">IFAC 2026 BMS Workshop</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+            <span class="font-extrabold text-xl tracking-tight text-blue-900">IFAC 2026 BMS Workshop</span>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600 uppercase tracking-wide">
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#speakers" class="hover:text-blue-600 transition">Speakers</a>
                 <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
@@ -26,36 +26,38 @@
         </div>
     </nav>
 
-    <header class="hero-gradient pt-32 pb-20 px-6 text-center text-white">
-        <div class="max-w-4xl mx-auto">
-            <div class="italic text-sm text-blue-200 mb-6 leading-relaxed">
-                August 23, 2026<br>
-                Location: BEXCO, Busan, Republic of Korea
-            </div>
-            
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+    <header class="hero-gradient pt-48 pb-32 px-6 text-center text-white">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight leading-[1.1]">
                 Next-Generation Battery Management Systems
             </h1>
-            <p class="text-3xl text-white font-bold max-w-2xl mx-auto">
+            <p class="text-2xl md:text-3xl text-white/90 font-medium max-w-3xl mx-auto opacity-95">
                 : Modeling, Estimation, Control, and Learning
             </p>
         </div>
     </header>
 
-    <div class="bg-slate-900 text-white py-4 px-6 text-center border-b border-slate-800">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-8">
-            <span class="text-sm font-semibold tracking-wider text-slate-400 uppercase">Countdown to Workshop</span>
-            <div id="countdown" class="text-2xl font-mono font-bold tracking-widest text-blue-400">
-                00:00:00:00
+    <div class="bg-slate-900 text-white py-8 px-6 text-center border-b border-slate-800 shadow-lg">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="text-center md:text-left space-y-1">
+                <div class="text-blue-400 font-bold text-lg tracking-tight">August 23, 2026</div>
+                <div class="italic text-slate-400 text-sm font-medium">Location: BEXCO, Busan, Republic of Korea</div>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end">
+                <span class="text-[11px] font-bold tracking-[0.2em] text-slate-500 uppercase mb-2">Countdown to Workshop</span>
+                <div id="countdown" class="text-4xl font-mono font-bold tracking-tighter text-white">
+                    00:00:00:00
+                </div>
             </div>
         </div>
     </div>
 
-    <section id="about" class="py-20 px-6 bg-white">
+    <section id="about" class="py-24 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
-            <div class="mb-16">
-                <h2 class="text-3xl font-extrabold mb-8 text-slate-900">About The Workshop</h2>
-                <div class="space-y-6 text-lg text-slate-600 leading-relaxed text-left">
+            <div class="mb-20">
+                <h2 class="text-4xl font-extrabold mb-10 text-slate-900 tracking-tight">About The Workshop</h2>
+                <div class="space-y-8 text-lg text-slate-600 leading-relaxed text-left font-normal">
                     <p>
                         The safety, performance, and longevity of battery energy storage systems depend heavily on advanced Battery Management Systems (BMS). While decades of research have enabled accurate modeling, state-aware monitoring, and reliable decision-making for systems under demanding operating conditions, fundamental challenges still remain when transitioning battery management algorithms from laboratory settings to real-world deployment.
                     </p>
@@ -66,47 +68,49 @@
             </div>
 
             <div class="text-left mb-10">
-                <h3 class="text-2xl font-bold text-slate-900 mb-8 px-2">Why Join Us?</h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-sm">
-                        <div class="text-blue-800 font-bold mb-3 leading-tight">World-Class & Diverse Insights</div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Learn from pioneers across different fields—materials science, control engineering, and machine learning—representing premier academic institutions and global industry leaders.</p>
+                <h3 class="text-2xl font-bold text-slate-900 mb-10 px-2 tracking-tight">Why Join Us?</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition">
+                        <div class="text-blue-900 font-bold text-lg mb-4 leading-tight">World-Class & Diverse Insights</div>
+                        <p class="text-slate-600 text-[15px] leading-relaxed">Learn from pioneers across different fields—materials science, control engineering, and machine learning—representing premier academic institutions and global industry leaders.</p>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-sm">
-                        <div class="text-blue-800 font-bold mb-3 leading-tight">Academia-Industry Panel</div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Participate in an interactive Q&A forum dedicated to addressing the academia-industry gap and real-world deployment challenges.</p>
+                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition text-slate-600">
+                        <div class="text-blue-900 font-bold text-lg mb-4 leading-tight">Academia-Industry Panel</div>
+                        <p class="text-[15px] leading-relaxed">Participate in an interactive Q&A forum dedicated to addressing the academia-industry gap and real-world deployment challenges.</p>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-sm">
-                        <div class="text-blue-800 font-bold mb-3 leading-tight">Community Building</div>
-                        <p class="text-slate-600 text-sm leading-relaxed">Connect with a diverse community of experts to shape the future of next-generation battery management systems.</p>
+                    <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition">
+                        <div class="text-blue-900 font-bold text-lg mb-4 leading-tight">Community Building</div>
+                        <p class="text-slate-600 text-[15px] leading-relaxed text-slate-600">Connect with a diverse community of experts to shape the future of next-generation battery management systems.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="speakers" class="py-24 bg-slate-50 border-t">
+    <section id="speakers" class="py-28 bg-slate-50 border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12 text-slate-900">Invited Speakers</h2>
-            <p class="text-slate-500 italic text-lg">Speaker list will be announced soon.</p>
+            <h2 class="text-3xl font-extrabold mb-12 text-slate-900 tracking-tight">Invited Speakers</h2>
+            <div class="py-12 px-6 border-2 border-dashed border-slate-200 rounded-3xl">
+                <p class="text-slate-400 font-medium text-lg">Speaker list will be announced soon.</p>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white border-t">
+    <section id="contact" class="py-28 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4 text-slate-900">Contact</h2>
-            <p class="text-slate-600 mb-8 font-medium">For any inquiries, please contact us via email.</p>
-            <a href="mailto:ljw7696@berkeley.edu" class="text-2xl font-bold text-blue-700 hover:text-blue-500 transition-colors">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900 tracking-tight">Contact</h2>
+            <p class="text-slate-500 mb-10 font-medium">For any inquiries, please contact us via email.</p>
+            <a href="mailto:ljw7696@berkeley.edu" class="text-3xl font-bold text-blue-700 hover:text-blue-500 transition-colors border-b-2 border-blue-100 pb-1">
                 ljw7696@berkeley.edu
             </a>
-            <p class="mt-8 text-sm text-slate-400 leading-relaxed">
+            <div class="mt-12 text-sm text-slate-400 leading-relaxed font-medium">
                 Energy, Controls, and Applications Lab (eCAL)<br>
                 University of California, Berkeley
-            </p>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 py-12 text-white/60 text-sm">
+    <footer class="bg-slate-900 py-16 text-white/40 text-xs tracking-widest uppercase font-semibold">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <p>© 2026 IFAC BMS Workshop. Organized by Scott Moura Lab, UC Berkeley.</p>
         </div>
@@ -114,7 +118,6 @@
 
     <script>
         function updateCountdown() {
-            // Target date: August 23, 2026, 08:00:00 AM (KST / UTC+9)
             const targetDate = new Date("2026-08-23T08:00:00+09:00").getTime();
             const now = new Date().getTime();
             const distance = targetDate - now;
@@ -129,15 +132,9 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Format as DD:HH:MM:SS
-            const d = days.toString().padStart(2, '0');
-            const h = hours.toString().padStart(2, '0');
-            const m = minutes.toString().padStart(2, '0');
-            const s = seconds.toString().padStart(2, '0');
-
-            document.getElementById("countdown").innerHTML = `${d}:${h}:${m}:${s}`;
+            document.getElementById("countdown").innerHTML = 
+                `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
-
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
