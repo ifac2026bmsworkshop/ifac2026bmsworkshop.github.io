@@ -420,16 +420,20 @@
                     </tbody>
                     </table>
                 </div>
-    
-                <div id="sch-panel" style="display:none; width:280px; min-width:280px; background:white; border:1px solid #e2e8f0; border-radius:16px; padding:20px; position:sticky; top:100px;">
-                    <div id="sch-p-time" style="font-size:16px; font-weight:700; color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;"></div>
-                    <div id="sch-p-name" style="font-size:16px; font-weight:700; color:#0f172a; margin-bottom:2px;"></div>
-                    <div id="sch-p-affil" style="font-size:16px; color:#64748b; margin-bottom:12px;"></div>
-                    <div id="sch-p-title" style="font-size:16px; font-weight:600; color:#1e3a8a; margin-bottom:10px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;"></div>
-                    <div id="sch-p-abstract" style="font-size:16px; color:#475569; line-height:1.7;"></div>
-                </div>
 
             </div>
+
+        <div id="sch-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:999; align-items:center; justify-content:center;" onclick="closeSchLB()">
+            <div style="background:white; border-radius:20px; max-width:680px; width:90%; padding:2rem; position:relative; max-height:80vh; overflow-y:auto;" onclick="event.stopPropagation()">
+                <button onclick="closeSchLB()" style="position:absolute; top:14px; right:16px; font-size:20px; color:#94a3b8; cursor:pointer; background:none; border:none;">✕</button>
+                <div id="sch-lb-time" style="font-size:13px; font-weight:700; color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;"></div>
+                <div id="sch-lb-name" style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:2px;"></div>
+                <div id="sch-lb-affil" style="font-size:16px; color:#64748b; margin-bottom:12px;"></div>
+                <div id="sch-lb-title" style="font-size:16px; font-weight:600; color:#1e3a8a; margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid #f1f5f9;"></div>
+                <div id="sch-lb-abstract" style="font-size:16px; color:#475569; line-height:1.8;"></div>
+            </div>
+        </div>
+            
         </div>
     
         <script>
@@ -485,32 +489,28 @@
                 schActiveRow.classList.remove('sch-active');
                 schActiveRow.style.background = '';
             }
-            if (schActiveRow === row) {
-                schActiveRow = null;
-                document.getElementById('sch-panel').style.display = 'none';
-                return;
-            }
             schActiveRow = row;
             row.classList.add('sch-active');
             row.style.background = '#dbeafe';
             const d = schData[idx];
-            document.getElementById('sch-p-time').textContent = d.time;
-            document.getElementById('sch-p-name').textContent = d.name;
-            document.getElementById('sch-p-affil').textContent = d.affil;
-            document.getElementById('sch-p-title').textContent = d.title;
-            document.getElementById('sch-p-abstract').textContent = d.abstract;
-            document.getElementById('sch-panel').style.display = 'block';
+            document.getElementById('sch-lb-time').textContent = d.time;
+            document.getElementById('sch-lb-name').textContent = d.name;
+            document.getElementById('sch-lb-affil').textContent = d.affil;
+            document.getElementById('sch-lb-title').textContent = d.title;
+            document.getElementById('sch-lb-abstract').textContent = d.abstract;
+            document.getElementById('sch-overlay').style.display = 'flex';
         }
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('tr') && !e.target.closest('#sch-panel')) {
-                if (schActiveRow) {
-                    schActiveRow.classList.remove('sch-active');
-                    schActiveRow.style.background = '';
-                    schActiveRow = null;
-                }
-                document.getElementById('sch-panel').style.display = 'none';
+        
+        function closeSchLB() {
+            if (schActiveRow) {
+                schActiveRow.classList.remove('sch-active');
+                schActiveRow.style.background = '';
+                schActiveRow = null;
             }
-        });
+            document.getElementById('sch-overlay').style.display = 'none';
+        }
+
+            
         </script>
     </section>
 
