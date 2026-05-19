@@ -464,7 +464,7 @@
                 name: "Prof. Changfu Zou",
                 affil: "Chalmers University of Technology",
                 title: "Model-Integrated Neural Networks for Control-Oriented Battery Modeling and Inference",
-                abstract: "Lithium-ion batteries are governed by nonlinear, multiscale, and partially observable electrochemical dynamics, creating fundamental challenges for control-oriented modelling, state inference, and health-aware operation. This talk presents our recent work in physics-constrained machine learning for battery intelligence, including model-integrated neural networks (MINN) and Bayesian model-integrated neural networks (BMINN). MINN embeds electrochemical differential–algebraic structures directly into neural architectures while preserving the causal state-update form of non-autonomous dynamic systems. Instead of learning fixed solution trajectories or black-box input–output mappings, MINN learns battery dynamics that remain responsive to arbitrary current inputs, supporting physically meaningful internal-state prediction, model adaptation, and closed-loop control. BMINN extends this principle from dynamic model integration to hidden thermodynamic inference. By embedding multiphase electrode physics into probabilistic learning, BMINN reconstructs graphite chemical potentials and Gibbs free-energy landscapes directly from routine current–voltage data. Together, these frameworks suggest a physically grounded pathway toward more adaptive, inference-capable, and control-compatible battery models for next-generation BMS."
+                abstract: "Lithium-ion batteries are governed by nonlinear, multiscale, and partially observable electrochemical dynamics, creating fundamental challenges for control-oriented modeling, state inference, and health-aware operation. This talk presents our recent work in physics-constrained machine learning for battery intelligence, including model-integrated neural networks (MINN) and Bayesian model-integrated neural networks (BMINN). <br><br>MINN embeds electrochemical differential–algebraic structures directly into neural architectures while preserving the causal state-update form of non-autonomous dynamic systems. Instead of learning fixed solution trajectories or black-box input–output mappings, MINN learns battery dynamics that remain responsive to arbitrary current inputs, supporting physically meaningful internal-state prediction, model adaptation, and closed-loop control. <br><br>BMINN extends this principle from dynamic model integration to hidden thermodynamic inference. By embedding multiphase electrode physics into probabilistic learning, BMINN reconstructs graphite chemical potentials and Gibbs free-energy landscapes directly from routine current–voltage data. Together, these frameworks suggest a physically grounded pathway toward more adaptive, inference-capable, and control-compatible battery models for next-generation BMS."
             },
             {
                 time: "13:00 – 13:30",
@@ -497,7 +497,7 @@
             document.getElementById('sch-lb-name').textContent = d.name;
             document.getElementById('sch-lb-affil').textContent = d.affil;
             document.getElementById('sch-lb-title').textContent = d.title;
-            document.getElementById('sch-lb-abstract').textContent = d.abstract;
+            document.getElementById('sch-lb-abstract').innerHTML = d.abstract;
             document.getElementById('sch-overlay').style.display = 'flex';
         }
         
