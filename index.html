@@ -220,12 +220,12 @@
                     <p class="text-slate-500 text-base italic">Michigan State University</p>
                 </div>
     
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center cursor-pointer" onclick="openLB(7)">
                     <div class="w-56 h-56 rounded-full bg-slate-200 mb-5 flex items-center justify-center">
                         <span class="text-slate-400 font-semibold text-lg">TBD</span>
                     </div>
-                    <p class="text-slate-400 font-bold text-lg mb-1">To Be Announced</p>
-                    <p class="text-slate-300 text-base italic">—</p>
+                    <p class="text-blue-900 font-bold text-lg mb-1">Hyunjun Jang</p>
+                    <p class="text-slate-500 text-base italic">TBD</p>
                 </div>
     
                 <div class="flex flex-col items-center cursor-pointer" onclick="openLB(4)">
@@ -295,6 +295,12 @@
                 affil: "University of California, Berkeley",
                 bio: "TBD",
                 photo: "photos/jaewoong.jpg"
+            },
+            {
+                name: "Hyunjun Jang",
+                affil: "Hyundai Motors",
+                bio: "TBD",
+                photo: "photos/jang.jpg"
             },
         ];
     
@@ -388,11 +394,12 @@
                             <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Prof. Huazhen Fang</span><br><span style="font-size:16px; color:#64748b;">Michigan State University</span></td>
                             <td style="padding:11px 14px; vertical-align:top; color:#0f172a; font-weight:700;">Reconfigurable Battery System Design and Optimal Power Control</td>
                         </tr>
-                        <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
-                            <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">13:30–14:00</td>
-                            <td colspan="2" style="padding:11px 14px; color:#94a3b8; font-style:italic;">Tech Talk #5 — TBD</td>
-                        </tr>
                         <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,5)">
+                            <td style="padding:11px 14px; color:#0f172a; font-weight:700; white-space:nowrap; vertical-align:top;">13:30–14:00</td>
+                            <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Hyunjun Jang</span><br><span style="font-size:16px; color:#64748b;">Hyundai Motors</span></td>
+                            <td style="padding:11px 14px; vertical-align:top; color:#0f172a; font-weight:700;">AI-Based BMS Algorithm Development from Embedded Deployment to Cloud Integration</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,6)">
                             <td style="padding:11px 14px; color:#0f172a; font-weight:700; white-space:nowrap; vertical-align:top;">14:00–14:30</td>
                             <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Dr. Gwanghoon Jun</span><br><span style="font-size:16px; color:#64748b;">LG Energy Solution</span></td>
                             <td style="padding:11px 14px; vertical-align:top; color:#0f172a; font-weight:700;">TBD</td>
@@ -472,6 +479,13 @@
                 affil: "Michigan State University",
                 title: "Reconfigurable Battery System Design and Optimal Power Control",
                 abstract: "TBD."
+            },
+            {
+                time: "13:30 – 14:00",
+                name: "Hyunjun Jang",
+                affil: "Hyundai Motors",
+                title: "AI-Based BMS Algorithm Development from Embedded Deployment to Cloud Integration",
+                abstract: "Few engineering domains demand as broad a convergence of disciplines as Battery Management Systems — and few offer a more direct view of that complexity than building them for production.<br><br>Robust state estimation, real-time fault diagnosis, and intelligent charging control each draw from a different intellectual tradition — optimal estimation theory, statistical signal processing, electrochemical modeling, modern control, and machine learning — and a production-grade BMS must weave all of them together into a single coherent system.<br><br>In an industrial setting, that challenge is compounded by the realities of deployment: algorithms that perform beautifully in simulation must ultimately run on embedded hardware with tight constraints on computation, memory, and response time.<br><br>AI-based approaches further extend these capabilities — from synthesizing data in conditions that are difficult to observe in practice, to optimizing battery operation across the full charge-discharge lifecycle.<br><br>Beyond the vehicle itself, cloud-connected architectures are reshaping what is possible, enabling fleet-scale diagnostics and deeper analytical capabilities that complement what can be done on-board.<br><br>Throughout all of this, the relationship between academic research and industrial development is less one of dependency than of dialogue. The problems industry encounters sharpen the questions worth asking, and the methods that research produces find their truest test in production.<br><br>It is in that ongoing exchange — between theory and hardware, between research and road — that battery technology continues to move forward, and it is that exchange this talk seeks to reflect."
             },
             {
             time: "14:00 – 14:30",
