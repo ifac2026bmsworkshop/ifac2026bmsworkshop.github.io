@@ -340,7 +340,7 @@
     <section id="schedule" class="py-28 bg-white border-t border-slate-100">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-extrabold mb-4 text-slate-900 tracking-tight text-center">Workshop Schedule</h2>
-            <p class="text-slate-600 text-right mt-2 mb-4" style="font-size:15px;">* Click on a session to view details</p>
+            <p class="text-slate-600 text-right mt-2 mb-4" style="font-size:16px;">* Click on a session to view details</p>
             <div style="display:flex; gap:24px; align-items:flex-start;">
     
                 <div style="flex:1; min-width:0; overflow-x:auto;">
@@ -402,7 +402,7 @@
                         <tr style="border-bottom:1px solid #f1f5f9; cursor:pointer;" onmouseover="this.style.background='#eff6ff'" onmouseout="if(!this.classList.contains('sch-active'))this.style.background=''" onclick="schSelect(this,6)">
                             <td style="padding:11px 14px; color:#0f172a; font-weight:700; white-space:nowrap; vertical-align:top;">14:00–14:30</td>
                             <td style="padding:11px 14px; vertical-align:top;"><span style="font-weight:700; color:#0f172a;">Dr. Gwanghoon Jun</span><br><span style="font-size:16px; color:#64748b;">LG Energy Solution</span></td>
-                            <td style="padding:11px 14px; vertical-align:top; color:#0f172a; font-weight:700;">TBD</td>
+                            <td style="padding:11px 14px; vertical-align:top; color:#0f172a; font-weight:700;">Advancing Next-Generation BMS and New Business Models via Physics-Based Battery Modeling</td>
                         </tr>
                         <tr style="border-bottom:1px solid #f1f5f9; background:#f8fafc;">
                             <td style="padding:11px 14px; color:#94a3b8; font-weight:600; white-space:nowrap; vertical-align:top;">14:30–14:35</td>
@@ -488,12 +488,12 @@
                 abstract: "Few engineering domains demand as broad a convergence of disciplines as Battery Management Systems — and few offer a more direct view of that complexity than building them for production.<br><br>Robust state estimation, real-time fault diagnosis, and intelligent charging control each draw from a different intellectual tradition — optimal estimation theory, statistical signal processing, electrochemical modeling, modern control, and machine learning — and a production-grade BMS must weave all of them together into a single coherent system.<br><br>In an industrial setting, that challenge is compounded by the realities of deployment: algorithms that perform beautifully in simulation must ultimately run on embedded hardware with tight constraints on computation, memory, and response time.<br><br>AI-based approaches further extend these capabilities — from synthesizing data in conditions that are difficult to observe in practice, to optimizing battery operation across the full charge-discharge lifecycle.<br><br>Beyond the vehicle itself, cloud-connected architectures are reshaping what is possible, enabling fleet-scale diagnostics and deeper analytical capabilities that complement what can be done on-board.<br><br>Throughout all of this, the relationship between academic research and industrial development is less one of dependency than of dialogue. The problems industry encounters sharpen the questions worth asking, and the methods that research produces find their truest test in production.<br><br>It is in that ongoing exchange — between theory and hardware, between research and road — that battery technology continues to move forward, and it is that exchange this talk seeks to reflect."
             },
             {
-            time: "14:00 – 14:30",
-            name: "Dr. Gwanghoon Jun",
-            affil: "LG Energy Solution",
-            title: "TBD",
-            abstract: "TBD."
-        }
+                time: "14:00 – 14:30",
+                name: "Dr. Gwanghoon Jun",
+                affil: "LG Energy Solution",
+                title: "Advancing Next-Generation BMS and New Business Models via Physics-Based Battery Modeling",
+                abstract: "As the electric vehicle (EV) industry transitions toward Software-Defined Vehicles (SDVs) and cloud-connected systems, the role of the Battery Management System (BMS) has become more important than ever. Traditional BMS approaches, heavily reliant on empirical or equivalent circuit models (ECMs), face significant limitations in tracking the complex, non-linear degradation of lithium-ion batteries. To overcome these challenges, this research presents a next-generation BMS framework by physics-based battery modeling. Unlike conventional methods, the physics-based model deeply reflects internal electrochemical mechanisms, enabling highly accurate estimation of the battery's internal states and precise prediction of future degradation trajectories across diverse operating conditions.<br><br>As a leading cell manufacturer, we developed this high-fidelity physics-based model through the unique integration of intrinsic material properties and cell design parameters with real-world electric vehicle EV driving data. This holistic approach ensures robust model fidelity throughout the entire lifecycle, from the initial cell development and manufacturing stages to field operations. Furthermore, we demonstrate how this advanced BMS serves as a core enabler for new business models, such as Battery-as-a-Service (BaaS)."
+            },
         ];
     
         let schActiveRow = null;
